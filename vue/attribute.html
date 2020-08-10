@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <a :[key]="url"> 네이버 바로가긴 </a>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            url:"https://www.naver.com",
+            someattr: "href",
+            key:"href"
+        }
+    })
+
+</script>
+
+</html>
