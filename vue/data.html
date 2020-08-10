@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+    <div id="app">
+        <p>{{ a }}</p>
+        <!-- obj.foo는 더이상 변하지 않습니다! -->
+        <button v-on:click="a = a+1">Change it</button>
+      </div>
+      
+</body>
+<script>
+  
+var data = { a: 1 }
+var vm = new Vue({
+  el: '#app',
+  data: data,
+  created: function () {
+    console.log('a is: ' + this.a)
+  }
+ 
+})
+
+vm.$data === data // => true
+vm.$el === document.getElementById('example') // => true
+
+// vm.$watch('a', function (newVal, oldVal) {
+//     console.log(oldVal);
+//     console.log(newVal);
+// });
+
+
+</script>
+
+</html>
