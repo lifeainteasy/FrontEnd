@@ -7,20 +7,15 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="comp">
-    </div>
-    <div id="app"></div>
-    <comp></comp>
+
+    <div id="app"> <co-mp></co-mp> </div>
 </body>
   <script>
+      Vue.component('co-mp',{
+          template: '<span>라라루!</span>'
+      });
       new Vue({
           el: '#app'
-      });
-      Vue.component('comp',{
-          render: function(h){
-              return h("span","안녕하세요, Vue입니다.")
-          },
-          template: '<span>라라루!</span>'
       });
   </script>
 </html>
