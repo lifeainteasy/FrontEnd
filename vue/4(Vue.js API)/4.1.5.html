@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        {{message}}
+    </div>
+  </body>
+  <script>
+      let a=3;
+      var parent_vm = new Vue({
+          el: '#app',
+          data:{
+              message: '하 정말'
+          },
+          created: function () {a--;console.log(a);}    
+
+      });
+      var child_vm = new Vue({
+          parent: parent_vm,
+          created: function () {a--;console.log(a);}    
+      })
+  </script>
+</html>
