@@ -7,6 +7,22 @@
 <i>결과는 뻔하겠지만.</i>
 
 
+
+#웹 개발자라면 기본적으로 알아야될 기초 소양
+- Git
+- 기본적인 터미널 사용법
+- 자료구조, 알고리즘
+- SOLID, KISS, YaGNI
+- Github
+- 라이센스
+- Semantic Versioning
+- SSH
+- HTTP/HTTPS와 APIS
+- 디자인 패턴
+- 문자 인코딩
+
+
+
 # HTML
 
 
@@ -20,12 +36,22 @@
 # JavaScript
 
 
+# CSS전처리기
+
+# CSS프레임워크
+
+# CSS 아키텍쳐
+
+# 빌드 도구
 
 
+
+# 프레임워크
+---
+- React, Vue, Angular중 하나 선택하세요~ <br> 하나 선택하라는 소리는 하나만 공부하라는 소리가 "절대"아닙니다!
 
 # React
 
-
-
-
 # Vue
+
+# Angular
