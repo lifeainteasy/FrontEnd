@@ -1,6 +1,8 @@
 <!--
-  
+  4.4.1 상태 옵션
 
+  상태 옵션은 Vue 인스턴스와 컴포넌트에서 
+  상태(state) 값을 다루거나 전달하는데에 사용됩니다.
 
 -->
 
@@ -13,18 +15,31 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" @click="add">
+      <props-simple msg="msg" hello="hello"></props-simple>
+
         {{counter}}
     </div>
   </body>
   <script>
+     Vue.component('props-simple',{
+        props: ['msg','hello'],
+        template:'<span>{{msg}} : {{hello}}<span>'
+      });
+      //props사용 예제
+
       var vm = new Vue({
         el:'#app',
         data:{
           counter:0
-        } 
-
-      })
+        },
+        methods:{
+          add: function(e) {
+            this.counter = this.counter+1;
+          }
+        }
+      });
+      // Vue의 옵션인 Data사용 예제
  
   </script>
 </html>
