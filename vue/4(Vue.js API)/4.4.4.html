@@ -1,0 +1,37 @@
+<!--
+    mounted 이벤트 훅 
+    mounted 이벤트는  직전 vm.$el이 
+    생성된 다음 마운트 하기 직전에 실행되는 메서드이다.
+
+    mounted이벤트 훅을 실행할 때에는 vm.$el 속성이 생성되어 있으므로 DOM을 직접 수정할 수 있다.
+    따라서 mounted 이벤트 훅은 Vue.js가 자동으로 하지 못하는 작업을 실행하는 데 중점을 둔다.
+    
+    
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        {{hello }}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+        el: "div#app",
+        data: {
+            hello: 'vue.js'
+        },
+        mounted: function(){
+            console.log('mounted 이벤트가 발생되었습니다.')
+        }
+      })
+      console.log(vm.$el);
+      
+  </script>
+</html>
