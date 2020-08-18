@@ -1,0 +1,36 @@
+<!--
+
+    beforeMount 이벤트 훅
+    Mount는 화면에 컴포넌트가 나타는 과정이다.
+    컴포너트가 나타나려면 Vue인스턴스가 el, template, render등을 통해서 
+    Dom에 생성되어야 한다. <- 특정 DOM에 생성되는 과정을 Mount라고 한다.
+    따라서 Mount가 되기 바로 전에 실행되는 메서드이다.
+    Mount가 되지 않는 Vue인스턴스는 아예 실행되지 않는다.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        {{message}}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el:"#app",
+          data:{
+              message:"멍청이"
+          },
+          beforeMount: function(){
+              console.log('beforeMount 이벤트가 발생되었습니다.')
+          }
+      })
+  </script>
+</html>
