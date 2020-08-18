@@ -15,6 +15,8 @@
   </head>
   <body>
     <div id="hello">
+        <button   @click="showCp"w>Toggle</button>
+        
         <keep-alive>
             <component :is="child1" v-if="show">
             </component>
@@ -33,7 +35,12 @@
           el: "#hello",
           data:{
               child1: Child,
-              show: false
+              show: true
+          },
+          methods:{
+              showCp: function(){
+                  this.show = !this.show;
+              }
           }
       })
 
