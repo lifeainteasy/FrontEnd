@@ -1,0 +1,40 @@
+<!--
+    updated 이벤트는 가상 DOm 재렌더링과 수정단계가 끝난 뒤 발생됩닏.
+    
+    updated 이벤트 훅의 호출 시점은 DOM에 변경된 상태가 명확히 적용되었음을 보장합니다.
+
+    DOM에 직접 접근해서 상태를 수정하면 updated 이벤트 훅은 DOM을 다시 업데이트 하지 않습니다.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app" @click="changeHello">
+        {{hello}}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el:"#app",
+          data:{
+              hello: "vue.js"
+          },
+          updated: function(){
+              console.log("새롭게 업데이트하는 Hello 상태 값은 " + this.hello  )
+          },
+          methods:{
+             changeHello: function(){
+                 this.hello = '나의 신, 오직 나의 신 기계손'
+                 console.log(this.$el.innerHTML);
+             }
+         }
+      })
+  </script>
+</html>
