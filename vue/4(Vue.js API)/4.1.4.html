@@ -1,3 +1,15 @@
+<!--
+    4.1.4 컴포지션 옵션
+    Vue 인스턴스 생성 시 컴포넌트의 상속 관계나 기본 동작에 영향을 미치는 옵션을 설정할 수 있다. 
+    이것을 컴포지션 옵션이라고 부른다.
+
+
+    parent옵션
+    parent옵션은 프로그램에서 선언한 컴포넌트의 상위 Vue컴포넌트를 설정하는데 사용된다.
+    이 옵션을 사용하지 않으면 컴포넌트는 자식이나 부모 컴포넌트가 없는 독립 컴포넌트가 된다.
+
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +20,34 @@
   </head>
   <body>
     <div id="app">
+        {{message}}
     </div>
   </body>
+  <script>
+      var parent_vm = new Vue({
+     
+      });
+      var child_vm = new Vue({
+          parent: parent_vm,
+      });
+      var mixin = {
+          el:"#app",
+          data:{
+              message: "hello"
+          },
+          created: function() {console.log(1)}
+      }
+      var vm = new Vue({
+          created: function() {console.log(2)},
+          mixins: [mixin],
+          data: {message: "h"}
+      })
+      /*
+        화면에 h가 출력되는 것을 볼 수 있다. 
+        Vue 컴포넌트는 mixins(믹스인) 객체를 전달받으면 믹스인 객체의 라이프사이클 이벤트 훅이 먼저 실행되고 뒤이어 
+        Vue 인스턴스 생성자에 전달한 라이프사이클 이벤트 훅을 실행함을 볼 수 있음.
+
+      */
+
+  </script>
 </html>
