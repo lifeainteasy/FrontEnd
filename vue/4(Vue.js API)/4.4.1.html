@@ -1,3 +1,11 @@
+<!--
+    beforeCreate 이벤트 훅
+    말 그대로 생성되기 전에 실행시킨다.
+    beforeCreate 이벤트 훅을 추가하면 생성자에 아무 인자도 받지 않는 
+    익명의 함수를 전달한다.
+
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +16,17 @@
   </head>
   <body>
     <div id="app">
+
     </div>
   </body>
+  <script>
+      var vm = new Vue({
+          data:{
+              hello: "vue.js"
+          },
+          beforeCreate: function(){
+              console.log('beforeCreate 이벤트가 발생되었습니다.'); 
+          }
+      })
+  </script>
 </html>
