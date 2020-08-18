@@ -1,0 +1,32 @@
+<!--
+    이벤트 및 라이프사이클 초기화 단계가 끝나면 Vue객체에서 이벤트를
+    초기화합니다. 이벤트 초기화 단계에서는 created 이벤트가 호출됩니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        {{hello}}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#app",
+          data:{
+              hello: ''
+          },
+          created: function(){
+              console.log('created 이벤트가 발생하였습니다.');
+              this.hello = "안녕 Vue"
+
+          }
+      })
+  </script>
+</html>
