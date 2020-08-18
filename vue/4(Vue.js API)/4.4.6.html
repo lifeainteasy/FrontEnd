@@ -1,0 +1,38 @@
+<!--
+    Vue vm이 메모리에서 완전히 제거된 다음에 호출되는 메서드입니다.
+    인스턴스의 모든 이벤트 리스너가 제거되며, Vue인스턴스도 제거됩니다. 
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app" @click="destroy">
+        {{hello}}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el:"#app",
+          data:{
+              hello: "안녕 Vue"
+          },
+          destroyed:function(){
+              console.log('destroyed 이벤트가 발생되었습니다.');
+          },
+          methods:{
+            destroy: function(){
+                this.$destroy();
+                console.log("destroy메서드 실행");
+            }
+          }
+      })
+  </script>
+
+</html>
