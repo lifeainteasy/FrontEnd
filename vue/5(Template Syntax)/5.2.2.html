@@ -1,0 +1,28 @@
+<!--
+    v-text 디렉티브를 사용하는 문자열 보간법
+   서버 사이드 템플릿 라이브러리 때문에  머스태시 문법 때문에 문제가 발생할 수도 있다. 
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span v-text="msg"></span>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: '#app',
+          data:{
+              msg: "Hello <b>Vue.js</b>"
+          }
+      })
+  </script>
+</html>
