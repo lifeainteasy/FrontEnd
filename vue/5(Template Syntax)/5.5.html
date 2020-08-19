@@ -1,0 +1,32 @@
+<!--
+    html보간법
+    Vue는 HTML 태그를 구성하는 상현 괄호(<,>)를 자동으로 이스케이프하기 때문에 안정성과 신뢰성을 높여준다.
+    하지만 HTML태그를 사용해야 할때에도 있다.
+    이럴 때를 대비해서 HTML보간법을 사용한다.
+    v-html을 사용한다.
+    v-html을 사용하면 안정성과 신뢰성이 떨어질 수 있기에
+    v-html 디렉티브는 화면에 표시하려는 데이터가 안전하고 신뢰할 수 있을 때만 사용하기를 권한다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <div v-html="rawHtml"></div>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: '#app',
+          data:{
+              rawHtml: "Hello <b>Vue.js</b>"
+          }
+      })
+  </script>
+</html>
