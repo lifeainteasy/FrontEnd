@@ -11,18 +11,22 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="app">
-        <div :id="dynamicID">
-            {{dynamicID}}
-        </div>
+  
+
+    <div id="asd">
+        <a v-bind:href="href">
+            종근종근 계손
+        </a>
     </div>
   </body>
   <script>
-    var vm = new Vue({
-        el: '#app',
+
+    var vm1 = new Vue({
+        el: '#asd',
         data:{
-            dynamicID: "first_div"
+            href="https://www.google.co.kr/"
         }
     })
+  
   </script>
 </html>
