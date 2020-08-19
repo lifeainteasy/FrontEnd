@@ -1,0 +1,33 @@
+<!--
+    vm.$mount 메서드
+    Vue인스턴스를 DOM의 특정 엘리먼트에 마운트하비다.
+    created나  beforedmount 이벤트 훅이 실행되기 전에 동작하며
+    Vue인스턴스를 원하는 때 언제든지 생성시킬 수 있습니다.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="hello">
+
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+        template: '<div>{{msg}}</div>',
+        data:{
+            msg: "Hello Vue.js"
+        }
+      });
+      var hello = document.querySelector('#hello');
+      vm.$mount(hello);
+      // DOM를 사용해 Vue인스턴스에서 제공하는 엘리먼트를 DOM에 추가해야한다.
+  </script>
+</html>
