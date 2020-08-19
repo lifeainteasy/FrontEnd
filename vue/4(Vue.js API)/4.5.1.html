@@ -27,7 +27,8 @@
         }
       });
       var hello = document.querySelector('#hello');
-      vm.$mount(hello);
+      vm.$mount(hello,true);
       // DOM를 사용해 Vue인스턴스에서 제공하는 엘리먼트를 DOM에 추가해야한다.
+      // 2번째 옵션은 DOM엘리머느에 어떻게 표현할지를 지정하는데 사용합니다.
   </script>
 </html>
