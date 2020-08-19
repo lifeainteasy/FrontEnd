@@ -4,8 +4,8 @@
  이것은 당신이 생각하는 프론트엔드 커리큘럼이 아니에요. <br>
 프론트엔드를 **입문** 하는 사람이  단기간(?)에 프론트엔드를 **마스터**하기 위해 만든거에요.<br>
 당신의 의지를 테스트해보세요!  <br>
-<i>결과는 뻔하겠지만.</i>
 
+<strong> 아직 개발 중입니다. 2021년 7월쯔음에 다 만들어 질 예정입니다. </strong>
 
 
 # 웹 개발자라면 기본적으로 알아야될 기초 소양
@@ -35,6 +35,7 @@
 
 # JavaScript
 
+# axios
 
 # CSS전처리기
 
@@ -54,6 +55,21 @@
 
 # React
 
+## React Redux
+
 # Vue
+# VueX
 
 # Angular
+
+
+# typeScript
+
+# Redux
+# Redux-saga
+
+# webpack
+
+# cleanCode
+
+# aws 
