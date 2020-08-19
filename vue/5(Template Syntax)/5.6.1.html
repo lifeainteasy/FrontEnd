@@ -1,6 +1,7 @@
 <!--
     v-model 디렉티브는 HTML폼과 Vue컴포넌트에 사용할 수 있는 특수디렉티브 입니다.
-
+    Vue 인스턴스의 search_word 상태 값을 설정하면input 태그의 value속성값으로 자동으로 설정됩니다. 
+    onChange와 비슷한 성질이라고 볼 수 있습니다.
 -->
 
 <!DOCTYPE html>
@@ -15,7 +16,8 @@
     <div id="app">
         <form method="POST" action="/search">
             <label id="text_search_word">검색어</label>
-            <input type="text" v-model="search_word"
+            <input type="text" v-model="search_word">
+            <input type="submit" value="찾기">
         </form>
     </div>
   </body>
