@@ -13,6 +13,7 @@
         <a v-bind:href="href">
           종근종근 계손
         </a>
+          <button :disabled="isButtonDisabled" >누르면 후회할껄?</button>
       </div>
     
     </div>
@@ -23,7 +24,9 @@
       data: {
         dynamicID: 'first_div',
         href: 'https://www.google.co.kr/',
-      },
+        isButtonDisabled: 'true'
+      }
     });
+    
   </script>
 </html>
