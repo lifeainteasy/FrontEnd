@@ -1,0 +1,39 @@
+<!--
+    일회성 보간법
+    브라우저의 DOM에 Vue인스턴스의 데이터가 한번 표시되면 데이터가 변경되어도 DOM이 업데이트되지 않습니다.
+    v-once 실행된다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <!-- <link rel="stylesheet" href="1.css"> 해또요 -->
+  </head>
+  <body>
+    <div id="app">
+        <span v-once @click="dont">다시는 변경하지 않습니다 : {{msg}} </span>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#app",
+          data:{
+              msg: "Don't let me down"
+          },
+          updated: function(){
+            console.log("updated발생 단계의 라이프사이클 단계를 정확히 알고 있다면?")
+          },
+          methods:{
+              dont: function(){
+                  this.msg = "이건 안나올껄?"   
+                  console.log("실행은되지")
+              }
+          }
+
+      })
+  </script>
+</html>
