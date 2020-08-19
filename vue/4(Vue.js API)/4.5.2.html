@@ -2,6 +2,12 @@
     vm.$nextTick 메서드는 updated이벤트 발생이 끝난 후 호출됩니다.
     DOM에 Updated된 내용을 기반으로 다시한번 DOM을 수정해야 해야 될때가 있을 수 있으므로 
     vm.$nextTick을 사용합니다.
+
+    vm.$nextTick 메서드는 콜백 함수 없이 Promise 객체를 반환해서 사용할 수 있다.
+    사용하는 방식도 Promise처럼 then을 사용해서 나타낸다.
+
+    vm.$nextTick 메서드를 호출하면 DOM이 업데이트된 이후에 실행하도록 별도의 큐에 담아두었다가 DOM이 업데이트된 후 
+    vm.$nextTick 메서드를 호출했던 순서대로 내부 큐에서 꺼내어 콜백함수를 실행하는 구조이므로 정상적으로 실행됩니다.
 -->
 <!DOCTYPE html>
 <html>
@@ -13,8 +19,11 @@
   </head>
   <body>
     <div id="hello">
-
         {{msg}}
+    </div>
+
+    <div id="bye">
+        {{good}}
     </div>
   </body>
   <script>
@@ -29,6 +38,21 @@
               this.$nextTick(function(){
                   this.$el.innerHTML += "오직 나의신, 기계손"
               });
+          }
+      })
+
+      var b = new Vue({
+          el: '#bye',
+          data:{
+              good: "안녕"
+          },
+          created: function(){
+              console.log("안녕 이제는 안녕");
+              var th = this.$nextTick();
+
+              th.then(function(vue){
+                  console.log(vue);
+              })
           }
       })
   </script>
