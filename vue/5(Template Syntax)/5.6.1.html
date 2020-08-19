@@ -1,0 +1,22 @@
+<!--
+    v-model 디렉티브는 HTML폼과 Vue컴포넌트에 사용할 수 있는 특수디렉티브 입니다.
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <form method="POST" action="/search">
+            <label id="text_search_word">검색어</label>
+            <input type="text" v-model="search_word"
+        </form>
+    </div>
+  </body>
+</html>
