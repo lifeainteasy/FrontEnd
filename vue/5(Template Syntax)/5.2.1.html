@@ -1,0 +1,32 @@
+<!--
+    머스태시 문법을 이용한 문자열 보간법은
+    우리가 생각하는
+    <span>{{message}}</span> <-이런 방식이 문자열 보간법이며
+    {{message}}<- 에 중괄호를 해석하는 것이 머스태시 문법입니다.
+    문자열 보간법 방식은 HTML태그를 사용해도 태그 그대로 출력된다.
+    왜냐하면 Vue.js가 안전하지 않은 데이터로 보고 HTML 태그를 표현하는 데 사용하는 산형 괄호(<,>)를 자동으로 이스케이프 처리한다는 점입니다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+    <div id="app">
+        <span>{{msg}}</span>
+    </div>
+</body>
+<script>
+  var vm =   new Vue({
+        el: "#app",
+        data:{
+            msg: 'Hello <b>Vue.js</b>' 
+        }
+    });
+</script>
+</html>
