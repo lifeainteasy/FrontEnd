@@ -1,0 +1,37 @@
+<!--
+    vm.$nextTick 메서드는 updated이벤트 발생이 끝난 후 호출됩니다.
+    DOM에 Updated된 내용을 기반으로 다시한번 DOM을 수정해야 해야 될때가 있을 수 있으므로 
+    vm.$nextTick을 사용합니다.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="hello">
+
+        {{msg}}
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el:"#hello",
+          data:{
+              msg: "나의 신" 
+          },
+          created: function(){
+              console.log("Created 이벤트가 발생되고 있습니다.");
+
+              this.$nextTick(function(){
+                  this.$el.innerHTML += "오직 나의신, 기계손"
+              });
+          }
+      })
+  </script>
+</html>
