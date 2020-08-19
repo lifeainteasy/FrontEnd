@@ -18,6 +18,10 @@
         <button   @click="showCp">Toggle</button>
         
         <keep-alive>
+            <!--
+                keep-alive는 동적 컴포넌트입니다.
+                컴포넌트들을 전환할 때 가끔 성능상의 이유로 상태를 유지하거나 재-렌더링을 피할때 사용합니다.
+            -->
             <component :is="child1" v-if="show">
             </component>
         </keep-alive>
