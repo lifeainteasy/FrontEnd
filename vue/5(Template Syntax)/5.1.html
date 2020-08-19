@@ -1,0 +1,33 @@
+<!--
+    선언전 렌더링
+    선언적 렌더링은 Vue 인스턴스의 어떤 데이터를 보여주겠다고 선언해서 DOM에 렌더링하는 것을 말한다.
+    선언적 렌더링을 사용하면 사용자가 DOM엘리먼트를 직접 다루지 않아도 Vue.js가 DOM 업데이트를 대신 처리해주므로
+    프로그램 로직만 신경 쓰면 된다,
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="hello">
+        {{message}}
+        <!--
+            {{message}}<- 이 중괄호 부분을 해석하는 것을 머스태시 구문이라고 한다.
+            머스태시 구문을 사용해 데이터 바인딩하는 것을 만자열 보간법이라고 한다.
+        -->
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#hello',
+            data:{
+                message: 'Vue Program!'
+            }
+        });
+    </script>
+  </body>
+</html>
