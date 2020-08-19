@@ -2,6 +2,9 @@
     일회성 보간법
     브라우저의 DOM에 Vue인스턴스의 데이터가 한번 표시되면 데이터가 변경되어도 DOM이 업데이트되지 않습니다.
     v-once 실행된다.
+    문자열 보간 기호나 디렉티브를 포함한 태그에 v-once 디렉티브를 추가하면 모든 자식 태그에 영향을 끼칩니다.
+    즉, v-once 디렉티브는 제한적으로 사용해야 합니다.
+
 -->
 
 <!DOCTYPE html>
@@ -15,13 +18,27 @@
   <body>
     <div id="app">
         <span v-once @click="dont">다시는 변경하지 않습니다 : {{msg}} </span>
+        <p v-bind:dir="dir"> {{msg}} </p>
+        <last-feed :comment="msg"></last-feed>
+        <ul>
+          <li v-for="i in list" v-once>{{ i }}</li>
+        </ul>
+        <span v-once v-text="msg"></span>
     </div>
   </body>
   <script>
       var vm = new Vue({
           el: "#app",
           data:{
-              msg: "Don't let me down"
+              msg: "오늘은 날씨가 참 좋네요.",
+              dir: "lt",
+              list: [1,2,3]
+          },
+          components:{
+            'last-feed':{
+              template: '<div> {{comment}} </div>',
+              props: ['comment']
+            }
           },
           updated: function(){
             console.log("updated발생 단계의 라이프사이클 단계를 정확히 알고 있다면?")
