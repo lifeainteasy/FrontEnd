@@ -1,0 +1,29 @@
+<!--
+    v-for는 자바스크립트 배열과 객체를 템플릿에 반복해 출력할 때 유일하게 사용할 수 있는 디렉티브입니다.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <ul>
+            <li v-for="n in list">{{n}}</li>
+        </ul>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: '#app',
+          data:{
+              list: ["vue.js", "React.js","Polymer.js","Google", "Hanbit"]
+          }
+      })
+  </script>
+</html>
