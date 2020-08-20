@@ -1,0 +1,28 @@
+<!--
+    capitalize 필터는 인자로 번달받은 문자열의 첫 번째 문자를 대문자로 변경하는 필터이다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span> {{ "hello" | capitalize}} </span>
+    </div>
+  </body>   
+  <script>
+      var app = new Vue({
+          el : "#app",
+          filters: {
+            capitalize: function(text){
+                return text[0].toUpperCase() + text.slice(1)
+            }
+          }
+      })
+  </script>
+</html>
