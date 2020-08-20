@@ -1,0 +1,44 @@
+<!--
+    여러개의 필터를 등록할 수 있습니다.
+    가장 왼쪽에 있는 필터를 적용한 다음에 오른쪽으로 한 필터씩 적용합니다.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span>{{ i | multiply_number(3,j) | add_number}}</span>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: '#app',
+          data:{
+              i: 5,
+              j: 2
+          },
+          filters:{
+              'multiply_number': function(value, number, j){
+                  if(j>0){
+                      return value * (number + 3)
+                  } else{
+                      return value * number
+                  }
+              },
+              'add_number': function(value){
+                  return value+4;
+              }
+          }
+      })
+  </script>
+  <script>
+
+  </script>
+</html>
