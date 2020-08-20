@@ -1,0 +1,35 @@
+<!--
+    json필터는 인자로 전달받은 데이터를 화면에 출력할 수 있는 JSON 형태로 만들어 변환합니다.
+    이 필터는 API사이트를 만들 떄 API와의 연동 결과를 보여 주는데 유용하게 사용할 수 있습니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        {{list | json}}
+    </div>
+  </body>
+    <script>
+        var app = new Vue({
+            el : "#app",
+            data:{
+                list:[{
+                    name: '이지호',
+                    lang: 'python'
+                }]
+            },
+            filters: {
+                json: function(entry){
+                    return JSON.stringify(entry)
+                }
+            }
+        })
+    </script>
+</html>
