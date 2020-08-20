@@ -1,3 +1,8 @@
+<!--
+  Vue필터는 전역 필터 이외에도 컴포넌트 한정 필터를 등록할 수 있다.
+  필터의 사용범위를 제한할때 사용한다.
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +13,22 @@
   </head>
   <body>
     <div id="app">
+      <span>
+        {{ i | multiply_number}}
+      </span>
     </div>
   </body>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data:{
+        i: 5
+      },
+      filters:{
+        'multiply_number' : function(value){
+          return value * 3;
+        }
+      }
+    })
+  </script>
 </html>
