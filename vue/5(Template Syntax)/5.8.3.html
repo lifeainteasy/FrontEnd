@@ -1,0 +1,28 @@
+<!--
+    lowercase 필터는 전달받은 문자를 모두 소문자로 만들어 반환하는 필터이다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span>{{"HELLO" | lowercase}}</span>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          filters:{
+              lowercase: function(text){
+                  return text.toLowerCase();
+              }
+          }
+      })
+  </script>
+</html>
