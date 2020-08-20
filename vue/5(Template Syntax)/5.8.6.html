@@ -11,7 +11,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>1</title>
     <script src="https://unpkg.com/vue"></script>
-    <script src="http://cdn.date-fns.org/VERSION/date_fns.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+
+
+
+
     <!-- date-fns를 가져오는 CDN -->
 
   </head>
@@ -27,7 +33,7 @@
             },
             filters:{
                 date: function(entry){
-                    return dateFns.format(entry, '오늘은 dddd입니다.'); 
+                    return dateFns.format(entry, '오늘은 dddd 입니다.'); 
                 }
             }
         })
