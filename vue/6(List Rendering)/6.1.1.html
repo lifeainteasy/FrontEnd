@@ -13,17 +13,27 @@
   </head>
   <body>
     <div id="app">
-        <ul>
-            <li v-for="n in list">{{n}}</li>
-        </ul>
+        <dl>
+            <div v-for="item in items">
+                      <dt>{{item.msg}}</dt>
+                      <dd>{{item.id}}</dd>    
+            </div>
+        </dl>
     </div>
   </body>
   <script>
       var vm = new Vue({
           el: '#app',
           data:{
-              list: ["vue.js", "React.js","Polymer.js","Google", "Hanbit"]
+              items: [{
+                id: 1,
+                msg: 'Hello Vue'
+              },{
+                id: 2,
+                msg: 'Hello React?'
+              }]
           }
-      })
+        
+      });
   </script>
 </html>
