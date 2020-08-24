@@ -8,7 +8,31 @@
   </head>
   <body>
        <div id="app">
-    </div>
+            <div v-for="(item, index) in items" :key="item.id">
+                <span>{{item.title}}</span>
+                <button @Click="deleteItem(item, index)">삭제</button>
+            </div>
+        </div>
   </body>
-  
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                items:[{
+                    id: 1,
+                    title: 'Vue.JS'
+                },{
+                    id: 2,
+                    title: "React.JS"
+                }]
+            },
+            methods:{
+                deleteItem: function(item, index){
+                    console.log(`item : ${item} \n index : ${index}`)
+                    this.items.splice(index,1);
+                
+                }
+            }
+        })
+    </script>
 </html>
