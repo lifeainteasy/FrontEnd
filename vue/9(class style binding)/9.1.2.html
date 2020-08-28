@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        div.active{border: solid 1px blue;}
+        div.text-danger{color:red;}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+        <div v-bind:class="classObject">classObject 값이 한 번에 적용되었습니다.</div>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          data:{
+              classObject:{
+                  active: true,
+                  'text-danger':true
+              }
+          }
+      })
+  </script>
+</html>
