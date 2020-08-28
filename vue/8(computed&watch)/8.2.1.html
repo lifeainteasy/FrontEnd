@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <p @click="show">역순 문자열 : {{msg_reverse}}</p>
+        <p ref="tester"> </p>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#app",
+          data:{
+              msg: "같이 뛰자. 우리 함께 뛰자"
+          },
+          computed:{
+              msg_reverse: function(){
+                  return this.msg.split('').reverse().join('')
+              }
+          },
+          methods:{
+              show: function(){
+                  this.$refs.tester.innerHTML = this.msg_reverse
+              }
+          }
+      })
+  </script>
+</html>
