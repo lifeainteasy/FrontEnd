@@ -1,0 +1,35 @@
+<!--
+    이벤트 리스너로 함수를 실행하는 것입니다.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <button @click="greet">Greet</button>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: '#app',
+          data:{
+              name: 'Vue.js'
+          },
+          methods:{
+              greet: function(event){
+                  alert("Hello " + this.name + '!');
+                  if(event){
+                      console.log(event.target.tagName)
+                  }
+              }
+          }
+      })
+  </script>
+</html>
