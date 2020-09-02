@@ -1,0 +1,33 @@
+<!--
+    .exact 은 시스템 수식어 키를 보조하는 기능이 있습니다.
+    중복되는 수식어 키가 있을때 조건에 완전 알맞은 이벤트만 출력하게 해줍니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <button @click.exact.alt.shift="onAltShfit_Click" @click.exact.alt="onAlt_Click">A</button>
+    </div>
+  </body>
+  <script>
+      new Vue({
+          el: "#app",
+          methods:{
+            onAltShfit_Click:function(){
+                  console.log("Alt키와 shitf키를 같이 눌렀습니다.");
+            },
+            onAlt_Click: function(){
+                console.log("Alt키만 눌렀습니다.");
+
+            }
+          }
+      })
+  </script>
+</html>
