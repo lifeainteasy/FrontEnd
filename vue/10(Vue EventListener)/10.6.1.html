@@ -8,15 +8,17 @@
   </head>
   <body>
     <div id="app">
-        <input @keyup.enter="submit">
+        <input v-on:keyup.enter="submit">
     </div>
   </body>
   <script>
       var app = new Vue({
           el: '#app',
-          methods: function(){
-              console.log("[Enter] 키가 떼어집니다.")
-          }
+          methods:{
+                submit: function(){
+                console.log("[Enter] 키가 떼어집니다.")
+            }
+          } 
       })
   </script>
 </html>
