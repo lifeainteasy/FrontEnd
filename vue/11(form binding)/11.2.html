@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span>Multiline message is</span>
+        <p style="white-space: pre-line;"> {{ message }} </p>
+        <br>
+        <textarea v-model="message" placeholder="add multiplie lines" row=5 cols=30>
+
+        </textarea>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          data:{
+              message: "여러 줄에 작성한 메시지 입니다. 강제 줄 바꿈은 \\n\n 문자입니다."
+          }
+      })
+
+  </script>
+</html>
