@@ -1,0 +1,30 @@
+<!--
+    자바스크립트에서 기본 동작을 막고 사용자가 원하는 동작을 실행하려면 브라우저 네이티브 이벤트 객체에 .prevent 이벤트 수식어를 호출해야 합니다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <form @submit.prevent="doPrevent" action="/doPrevent">
+            <input type="submit" value="Default Action Cancel">
+        </form>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#app",
+          methods:{
+              doPrevent: function(){
+                  console.log("기본 동작을 취소합니다.");
+              }
+          }
+      })
+
+  </script>
+</html>

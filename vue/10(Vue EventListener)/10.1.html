@@ -1,0 +1,28 @@
+<!--
+    Vue.js는 사용자의 이런 동작에 대응(이벤트 리스닝)하기 위해 v-on 디렉티브를 사용합니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <button v-on:click="counter += 1">
+            {{counter}}
+        </button>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: '#app',
+          data:{
+              counter: 0
+          }
+      })
+  </script>
+</html>

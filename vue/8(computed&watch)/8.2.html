@@ -1,0 +1,35 @@
+<!--
+    computed의 특징 중 하나는 인스턴스 템플릿을 해석할 때마다
+    인스턴스 상태 값을 새로 갱신하지 않도록 내부에 computed 속성값을 인스턴스 내부에 저장해두는 것입니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app" >
+        <p @click="show">  캐싱된 시간 : {{ now }}</p>
+        <p ref="tester"></p>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#app",
+          computed:{
+              now: function(){
+                  return Date.now();
+              }
+          },
+          methods:{
+              show: function(){
+                  this.$refs.tester.innerHTML = Date.now();
+              }
+          }
+      })
+  </script>
+</html>

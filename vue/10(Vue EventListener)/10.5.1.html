@@ -1,0 +1,40 @@
+<!--
+    이벤트 수식어를 사용하는 이유
+        - 이벤트 버블링을 제어하기 위해서
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <div @click="doTop" style="backgorund-color: blue; witdh:200px; height: 200px;">
+            <div @click="doMiddle"
+                 style="background-color: magenta; width: 100px; height: 100px;">
+                <input type="button" @click="doLast" value="제출">
+            </div>
+        </div>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+        el: "#app",
+        methods:{
+            doTop: function(){
+                console.log("첫 번째 div에서 이벤트가 발생되었습니다.")
+            },
+            doMiddle: function(){
+                console.log("두 번째 div에서 이벤트가 발생되었습니다.")
+            },
+            doLast: function(){
+                console.log("마지막 이벤트가 발생되었습니다.");
+            }
+        }
+      })
+  </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        div.active { border:solid 1px blue}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+        <div v-bind:class="{active: isAcitve}" @click="onToggle">active css 클래스 적용되었습니다. </div>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: '#app',
+          data:{
+              isAcitve: true
+          },
+          methods:{
+            onToggle: function(){
+                this.isAcitve = !this.isAcitve
+            }
+          }
+      })
+  </script>
+</html>

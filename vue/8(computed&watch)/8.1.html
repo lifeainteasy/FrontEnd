@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+    <div id="example">
+        
+        {{ reverseMessage }}
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#example',
+        data:{
+            message: 'Hello Vue.js World'
+        },
+        computed:{
+            reverseMessage: function(){
+                return this.message.split('').reverse().join('');
+            }
+        }
+    })
+</script>
+</html>

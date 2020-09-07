@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+       <div id="app">
+            <div v-for="(item, index) in items" :key="item.id">
+                <span>{{item.title}}</span>
+                <button @Click="deleteItem(item, index)">삭제</button>
+            </div>
+        </div>
+  </body>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                items:[{
+                    id: 1,
+                    title: 'Vue.JS'
+                },{
+                    id: 2,
+                    title: "React.JS"
+                }]
+            },
+            methods:{
+                deleteItem: function(item, index){
+                    console.log(`item : ${item} \n index : ${index}`)
+                    this.items.splice(index,1);
+                
+                }
+            }
+        })
+    </script>
+</html>

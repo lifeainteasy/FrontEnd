@@ -1,0 +1,36 @@
+<!--
+    자바스크립트 표현식을 직접 사용해 인스턴스 템플릿에서 메서드를 직접 호출하는 형태를 인라인 메서드 리스너라고 합니다.    
+    인스턴스 템플릿에서 인라인 메서드 리스너를 호출할 때는 주의해야 할 점이 있습니다. 메서드 호출 인자를 1개 이상 전달할 때는 브라우저에서 발생한 이벤트 정보를 리스너에 전달하려면 $event라는 
+    인자를 명시적으로 설정해야 한다는 점입니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <button @click="greet($event)">Greet</button>
+    </div>
+  </body>
+  <script>
+    var app = new Vue({
+        el: "#app",
+        data:{
+            name: 'Vue.js'
+        },
+        methods:{
+            greet: function(event){
+                alert('Hello ' + this.name + '!');
+                if(event){
+                    alert(event.target.tagName)
+                }
+            } 
+        }
+    })      
+ </script>
+</html>

@@ -1,0 +1,31 @@
+<!--
+  v-if 디렉티브의 표현식을 평가하는 과정에서 가장 DOM기능을 사용합니다.
+  가상 DOM기능을 사용해서 생성된 DOM과 이미 존재하는 DOM의 엘리먼트와 다를 때 브라우저에 존재하는 Dom을 업데이트합니다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <span v-if="id==2">값이 3입니다.</span>
+      <span v-if="id==1">값이 2입니다.</span>
+
+    </div>
+  </body>
+  <script>
+
+      var app = new Vue({
+        el: '#app',
+        data:{
+          id: 1
+        }
+      })
+  </script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <p>원본 메시지 : "{{message}}" </p>
+        <p>뒤집히도록 계산된 메시지 :  "{{ reversesdMessage }}"</p>
+    </div>
+  </body>
+  <script>
+      var vm = new Vue({
+          el: "#example",
+          data:{
+              message: "안녕하세요"
+          },
+          computed:{
+              reversedMessage:{
+                  get: function(){
+                      return this.message.split('').reverse().join('')
+                  }
+              }
+          }
+      })
+  </script>
+</html>

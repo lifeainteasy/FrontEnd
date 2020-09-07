@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app" @click="doLast">
+        <div @click="doLast">
+            <div style="background-color: blue; width: 200px; height: 200px" @click.self="doMiddle">
+                <span @click="doThat">span element</span>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: '#app',
+          methods:{
+              doThat: function(){
+                  console.log("doThat Click");
+              },
+              doMiddle: function(){
+                  console.log("doMiddle event...");
+              },
+              doLast: function(){
+                  console.log("do Last");
+              }
+          }
+      })
+  </script>
+</html>

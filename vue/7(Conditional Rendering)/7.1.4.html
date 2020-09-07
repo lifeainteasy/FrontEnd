@@ -1,0 +1,26 @@
+<!--
+    v-if디렉티브는 가상DOM에서 처리하는 것이라서 조건에 부합하지 않으면 DOM에 렌더링 되지 않지만 v-show는 조건 결과가 거짓이여도 DOM에 추가된다는 차이점이 있다.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <span v-show="useLocation">Korea</span> 
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          data:{
+              useLocation: true
+          }
+      })
+  </script>
+</html>
