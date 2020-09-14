@@ -48,6 +48,9 @@
 
 # React
 # Next
+Next정리
+- https://github.com/zofqofhtltm8015/FrontEnd/tree/master/next/nextjs-blog
+
 - Next에 Styled-Component 적용하기
 https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c
 
@@ -55,6 +58,8 @@ https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101
 ## React Redux
 
 # Vue
+Vue정리
+https://github.com/zofqofhtltm8015/FrontEnd/tree/master/vue
 # VueX
 
 # Angular
