@@ -47,6 +47,10 @@
 ---
 
 # React
+# Next
+- Next에 Styled-Component 적용하기
+https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c
+
 
 ## React Redux
 
