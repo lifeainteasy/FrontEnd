@@ -30,5 +30,13 @@
     - CommonJS에서는 require을 사용해서 가져온다.
     ``` 
         import 모듈_이름 from 모듈 위치
-        
+ 
     ```
+
+# 모듈의 종류
+- Bulit-Core Module EX) Node.js module
+- Community-based Module EX) NPM
+    - npm CLI를 사용해야함
+- Local Module
+
+- 위치를 기준으로 모듈을 분류할 수 있음.
