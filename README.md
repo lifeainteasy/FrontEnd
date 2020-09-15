@@ -51,7 +51,7 @@
 Next정리
 - https://github.com/zofqofhtltm8015/FrontEnd/tree/master/next/nextjs-blog
 
-- Next에 Styled-Component 적용하기
+- Next에 Styled-Component 적용할때 생기는 오류 해결법! <br>
 https://dev.to/aprietof/nextjs--styled-components-the-really-simple-guide----101c
 
 
