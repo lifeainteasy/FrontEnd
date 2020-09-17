@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{option.text }}
+                </option>
+        </select>
+        <span>Selectd : {{ selected }} </span>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          data: {
+              selected: ["C"],
+              options: [
+                  {text: 'One', value:'A'},
+                  {text: 'Two', value:'B' },
+                  {text: 'Three', value: 'C'}
+              ]
+          }
+      });
+  </script>
+</html>
