@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <input type="radio" id="one" value="One" v-model="picked" name="radio">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked" name="radio">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked : {{ picked }}</span>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+          el: "#app",
+          data:{
+              picked: ""
+          }
+      })
+  </script>
+</html>
