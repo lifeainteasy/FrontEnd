@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <comp :foo.sync="bar">
+        </comp>
+    
+    </div>
+    <script>
+        Vue.component('comp',{
+            template: '<input v-on:keyup="update" v-model="foo_internal">',
+            props: ["foo"],
+            data: function(){
+                return{
+                    "foo_internal": this.foo
+                }
+            },
+            methods:{
+                update: function(){
+                    this.$emit("update:foo", this.foo_internal);
+                    console.log(this.foo)
+                }
+            }
+        });
+        var vm = new Vue({
+            el: "#app",
+            data:{
+                bar: "hi2"
+            }
+        });
+    </script>
+  </body>
+</html>
