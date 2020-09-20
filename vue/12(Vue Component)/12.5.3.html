@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+        <currency-input v-model="total"></currency-input>
+    </div>
+    <script>
+        Vue.component('currency-input',{
+            template: '\
+            <span>\
+                $\
+                <input\
+                    ref="input"\
+                    v-bind:value="value"\
+                    v-on:input="updateValue($event.target.value)">\
+            </span>',
+            props: ['value'],
+            methods:{
+                updateValue: function(value){
+                    console.log(value);
+                    var formattedValue = value
+                    .trim()
+                    .slice(
+                        0,
+                        value.indexOf('.') === -1 ? value.length : value.indexOf('.') + 3)
+                    
+
+                    if(formattedValue !== value){
+                        this.$refs.input.value = formattedValue
+                    }
+                    this.$emit('input',Number(formattedValue))
+                }
+            }
+        })
+        new Vue({
+            el:"#app",
+            data:{
+                total: 0
+            }
+        })
+    </script>
+  </body>
+
+</html>
