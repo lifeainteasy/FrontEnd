@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<style>
+    body{
+        position: absolute;
+        left: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    div{
+        padding: 20px;
+    }
+    input{
+        transition: all 0.5s;
+        outline: none;
+        padding: 20px 50px 20px 50px;
+        border:none;
+
+        border-bottom: gray 3px solid;
+        border-radius: 30px;        
+        font-size: 18px;    
+        cursor: pointer;
+    }
+    input:focus{
+        box-shadow: 3px 3px 10px 2px #74b9ff;
+        border: gray 3px solid;
+
+
+    }
+
+
+</style>
+<body>
+        <div>
+            <input type="email" placeholder="email을 입력해주세용" id="email" value="" >
+        </div>
+        <div>
+            <input type="password" placeholder="비밀번호를 입력해주세용" id="pw" value="">
+        </div>
+        
+        <input type="button" onclick='onLoggin()' value="로그인">
+</body>
+    <script>
+        function onLoggin(){
+            
+            const email = document.getElementById("email");
+            const password = document.getElementById('pw')
+            axios({
+                method:"POST",
+                url: 'https://reqres.in/api/login',
+                data:{
+                    "email": email.value,
+                    "password": password.value
+                }
+            }).then((res)=>{
+                console.log(res);
+            }).catch(error=>{
+                console.log(error);
+                throw new Error(error);
+            });
+        }
+        axios.get('https://reqres.in/api/users?page=2').then((Response)=>{
+    console.log(Response.data);
+}).catch((Error)=>{
+    console.log(Error);
+})
+    </script>
+</html>
+
