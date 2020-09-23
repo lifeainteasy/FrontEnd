@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.5.1/vuex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  </head>
+  <body>
+    <div id="app">
+              vm computed count : {{ count }} <br>
+              vm computed countAlias : {{ countAlias }} <br>
+              vm computed countPlusLocalState : {{ countPlusLocalState }} <br>
+              <button @click="addCount">Add</button>
+
+    </div>
+  </body>
+  <script>
+      const Counter = {
+          template: '\
+          <div>{{ count }}</div>' ,
+          computed:{
+              count(){
+                  return store.state.count
+              }
+          },
+      
+      }
+      const store = new Vuex.Store({
+          state: {
+              count: 3
+          },
+          mutations:{
+              increment(state){
+                  state.count++;
+              }
+          }
+      });
+      const app = new Vue({
+        el: "#app",
+        data:{
+            localCount: 2
+        },
+        store,
+        computed: Vuex.mapState({
+            count: state=> state.count,
+            countAlias: 'count',
+            countPlusLocalState(state){
+                return state.count + this.localCount
+            }
+        }),
+        methods: {
+              addCount: function(){
+                  return commit("icrement");
+                  
+              }
+          },
+        components:{Counter},
+      
+      })
+  </script>
+</html>
