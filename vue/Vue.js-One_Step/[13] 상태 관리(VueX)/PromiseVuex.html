@@ -35,6 +35,11 @@
                           resolve();
                       },1000)
                   })
+              },
+              actionB ({dispatch,commit}){
+                  return dispatch('actionA').then(()=>{
+                      commit('someMutation')
+                  })
               }
           }
       });
