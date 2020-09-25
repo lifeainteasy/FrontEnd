@@ -9,11 +9,10 @@
   </head>
   <body>
     <div id="app">
-        <div>
 
-        </div>
     </div>
     <script>
+
         function getData(){
             return new Promise((resolve, reject)=>{
                 setTimeout(function(){
@@ -46,9 +45,13 @@
                 async actionA({commit}){
                     commit('gotData',await getData())
                 },
-                async
+                async actionB({dispatch, commit}){
+                    await dispatch('actionA')
+                    commit('gotOtherData', await getOtherData());
+                }
             }
         })
+
     </script>
   </body>
 </html>
