@@ -98,8 +98,9 @@
     var vm = new Vue({
         store: 'store',
         methods:{
-            ...Vuex.mapMutations(['sync_mutation])
+            ...Vuex.mapMutations(['sync_mutation'])
         }
     });
 ```
+
 
