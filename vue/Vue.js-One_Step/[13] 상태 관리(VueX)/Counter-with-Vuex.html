@@ -13,7 +13,7 @@
               vm computed count : {{ count }} <br>
               vm computed countAlias : {{ countAlias }} <br>
               vm computed countPlusLocalState : {{ countPlusLocalState }} <br>
-              <button @click="addCount">Add</button>
+              <button @click="add">Add</button>
 
     </div>
   </body>
@@ -36,8 +36,15 @@
               increment(state){
                   state.count++;
               }
+          },
+          actions:{
+              increment ({commit}, increment_value){
+                  console.log("액션 메서드 호출과 하께 전달된 값: "+ increment_value.amount);
+                commit('increment');
+              }
           }
       });
+
       const app = new Vue({
         el: "#app",
         data:{
@@ -51,12 +58,9 @@
                 return state.count + this.localCount
             }
         }),
-        methods: {
-              addCount: function(){
-                  return commit("icrement");
-                  
-              }
-          },
+        methods:{
+            ...Vuex.mapActions({add: 'increment'})
+        },
         components:{Counter},
       
       })
