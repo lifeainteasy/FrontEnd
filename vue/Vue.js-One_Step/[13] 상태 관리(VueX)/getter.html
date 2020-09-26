@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+
+  </head>
+  <body>
+    <div id="app">
+    </div>
+  </body>
+  <script>
+         const one_store = new Vuex.Store({
+        state:{
+            todos:[
+                {id: 1, text: '논문 쓰기',done:true},
+                {id: 2, text: '책 쓰기', done: false}
+            ]
+        },
+        getters:{
+            doneTodos: state=>{
+                return state.todos.filter(todo=> todo.done)
+            },
+            doneTodosCount: (state, getters) =>{
+                return getters.doneTodos.length
+            }
+        }
+    });
+     
+    var vm = new Vue({
+        data: {
+            localCount: 2
+        },
+        store: one_store,
+        computed:{
+            ...Vuex.mapGetters(['doneTodosCount'])
+        }
+    })
+  </script>
+</html>
