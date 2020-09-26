@@ -1,0 +1,62 @@
+<!--
+    단일 저장소 객체는 저장소가 다루는 상태, 액션, 변이 메서드의 수가 개발자가 유지보수하기에 적합한 정도를 벗어나거나 프로그램의 규모가 커짐에 따라 저장소를 사용하는
+    거대해진 저장소를 분리할 필요가 있습니다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+</head>
+<body>
+
+</body>
+<script>
+    const moduleA = {
+        state:{ count: 0},
+        mutations:{
+            increment (state){
+                state.count++
+            }
+        },
+        getters:{
+            doubleCount (state){
+                return state.count * 2;
+            }
+        }
+    }
+    const moduleB = {
+        state:{count2: 10},
+        mutations:{
+            increment2(state){
+                state.count2++
+            }
+        },
+        getters:{
+            doubleCount2(state){
+                return state.count * 2
+            }
+        }
+
+    }
+    const store = new Vuex.Store({
+        modules:{
+            a: moduleA,
+            b: moduleB
+        }
+    });
+
+    var vm = new Vue({
+        
+        store: store,
+        computed:{
+            ...Vuex.mapGetters(['doubleCount','doubleCount2'])
+        },
+        
+    });
+</script>
+</html>
