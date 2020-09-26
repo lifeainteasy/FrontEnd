@@ -1,6 +1,6 @@
 # FrontEnd
 ---
-## 목차\
+## 목차
 [최종근의 포트폴리오](#최종근의-포트폴리오) \
 [1.개발자의 기초 소양](#개발자의-기초-소양)\
 [2.HTML](#HTML)\
@@ -24,10 +24,18 @@
 
 # 개발자의 기초 소양
 - Git
+ - Git사용법
+  - https://tagilog.tistory.com/377
+ 
+ - Git DeskTop 사용법
+  - https://mrhook.co.kr/261
+  
+ - Git커밋 관련 규칙
+  - https://velog.io/@wow/%EB%82%98%EB%A7%8C%EC%9D%98-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%84%B8%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0
+  
 - 기본적인 터미널 사용법
 - 자료구조, 알고리즘
 - SOLID, KISS, YaGNI
-- Github
 - 라이센스
 - Semantic Versioning
 - SSH
