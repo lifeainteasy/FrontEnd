@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+  </head>
+  <body>
+    <div id="app" @click="update">
+        {{happy}}
+    </div>
+    
+  </body>
+  <script>
+      const myPlugin = store =>{
+          store.subscribe((mutations,state)=>{
+              console.log(` mutations:`);
+              console.log(mutations);
+              console.log(`state :`);
+              console.log(state);
+          })
+      }
+      const store = new Vuex.Store({
+          state:{
+              happy: 40
+          },
+          mutations: {
+              happy_update(state){
+                  state.happy = 30
+              }
+          },
+          plugins:[myPlugin]
+      });
+      
+      const app = new Vue({
+          el: "#app",
+          store :store,
+          computed:{
+              happy() {
+               return  store.state.happy
+              }
+          },
+          methods:{
+              update(){
+                  store.commit({type: 'happy_update'})
+            }
+          }
+
+      })
+  </script>
+</html>
