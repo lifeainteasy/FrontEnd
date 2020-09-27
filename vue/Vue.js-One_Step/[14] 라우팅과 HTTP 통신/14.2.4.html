@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h1>Hello App!</h1>
+        <ul>
+            <li v-for="entry in article" :key="entry.no">
+                <router-link :to="{name: 'article', params: {no: entry.no}}">
+                    Go to {{entry.title}}
+                </router-link>
+            </li>
+        </ul>
+        <router-view></router-view>
+    </div>
+    
+  </body>
+
+</html>
