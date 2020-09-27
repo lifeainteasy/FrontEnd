@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h1>Hello App!</h1>
+        <ul>
+            <li v-for="entry in article" :key="entry.no">
+                <router-link :to="'/board/' + entry.no">
+                    Go to {{ entry.title }}
+                </router-link>
+            </li>
+        </ul>
+        <router-view></router-view>
+    </div>
+  </body>
+  <script>
+      const BoardComp = {
+          template: `
+            <div>게시판 컴포넌트입니다.
+                    <router-view>중첩 라우팅은 여기에 표시됩니다.</router-view>
+                </div>
+          `
+      }
+      const Comp = {
+          template: `<div>vue {{ no }}</div>`,
+          computed: {
+              no: function(){
+                  return this.$route.params.no;
+              }
+          }
+      }
+
+      const router = new VueRouter({
+          routes: [{
+              path: '/', component: BoardComp, children: [
+                  {path: "/board/:no", component: Comp}
+              ]
+          }]
+      });
+      const app = new Vue({
+          el: "#app",
+          router:router,
+          data:{
+              article:[
+                  {no: 1, title: 'Vue.js 책이 출간되었어용'},
+                  {no: 2, title: '최종근은 경찰이 되고 싶어요'},
+                  {no: 3, title: '이러다가 경찰시험 합격하고 갑자기 급발진해서 요리사 자격증 공부할꺼 같아요'},
+            ]}
+      })
+  </script>
+</html>
