@@ -108,7 +108,17 @@ https://github.com/zofqofhtltm8015/FrontEnd/tree/master/vue
 
 
 # typeScript
-
+ - typeScript 공부정리
+  - https://github.com/zofqofhtltm8015/TypeScript
+ - 타입스크립트 공식 문서(영어, 공식사이트)
+  - https://www.typescriptlang.org/docs
+ - 노마드 코더 타입스크립트 블록체인 만들기!!
+  - https://www.youtube.com/watch?v=7wAhwv2Rbxw&list=PL7jH19IHhOLNM5mePXxbpnPefi6PiiNCX
+ - React + TS 조합이 꿀인 이유!!
+  - https://www.youtube.com/watch?v=lysravK7ePQ
+ - TypeScript 공식 문서 (한글변역)
+  -  https://typescript-kr.github.io/
+  
 # Redux
 
 # Redux-saga
