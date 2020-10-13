@@ -26,13 +26,13 @@
 
 ## Git
   - Git사용법
-   - https://tagilog.tistory.com/377
+    - https://tagilog.tistory.com/377
  
   - Git DeskTop 사용법
-   - https://mrhook.co.kr/261
+    - https://mrhook.co.kr/261
   
   - Git커밋 관련 규칙
-   - https://velog.io/@wow/%EB%82%98%EB%A7%8C%EC%9D%98-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%84%B8%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0
+    - https://velog.io/@wow/%EB%82%98%EB%A7%8C%EC%9D%98-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%84%B8%EC%A7%80-%EB%A7%8C%EB%93%A4%EA%B8%B0
   
 ## 기본적인 터미널 사용법
 
