@@ -97,12 +97,10 @@
 # 프레임워크
 <details>
   <summary>(React공부하려면 이정돈 알아야함)</summary>
-  <div markdown="1">
-  ✨다음 질문들을 *구글링 하지 않으시고!* 대답할 수 있을 정도에 실력이 된다면 React Or Vue를 공부하시는 것을 ✅ 추천드립니다! 
-    
+  <div markdown="1">    
   - 자바스크립트의 Class를  사용해서 객체를 만들 수 있나요? 
       - JS클래스 => https://infoscis.github.io/2018/02/13/ecmascript-6-introducing-javascript-classes
-  - 
+  
 </div>
 </details>
 
