@@ -1,24 +1,32 @@
 # FrontEnd
+대덕소프트웨어마이스터고등학교(DSM) 재학중인 2120최종근은 Front-end를 어떻게 공부했나면요...
 
 ## 목차
-<b> [최종근의 포트폴리오](#최종근의-포트폴리오) </b> \
-[1.개발자의 기초 소양](#개발자의-기초-소양)\
-[2.HTML](#HTML)\
-[3.CSS](#CSS)\
-[4.JavaScript](#JavaScript)\
-[5.axios](#axios)\
-[6.HTML](#HTML)\
-[프레임워크](#프레임워크)\
-[7.React](#React)\
-[8.Next](#Next)\
-[9.Redux](#Redux)\
-[11.Redux-saga](#Redux-saga)\
-[12.Vue](#Vue)\
-[13.VueX](#VueX)\
-[14.typeScript](#typeScript)\
-[15.webpack](#webpack)\
-[16.cleanCode](#cleanCode)\
-[17.aws](#aws)
+<details>
+  <summary>(펼치기|접기)</summary>
+  
+  [최종근의 포트폴리오](#최종근의-포트폴리오)\
+  [1.개발자의 기초 소양](#개발자의-기초-소양)\
+  [2.HTML](#HTML)\
+  [3.CSS](#CSS)\
+  [4.JavaScript](#JavaScript)\
+  [5.axios](#axios)\
+  [6.HTML](#HTML)\
+  [프레임워크](#프레임워크)\
+  [7.React](#React)\
+  [8.Next](#Next)\
+  [9.Redux](#Redux)\
+  [11.Redux-saga](#Redux-saga)\
+  [12.Vue](#Vue)\
+  [13.VueX](#VueX)\
+  [14.typeScript](#typeScript)\
+  [15.webpack](#webpack)\
+  [16.cleanCode](#cleanCode)\
+  [17.aws](#aws)
+
+</details>
+
+<b>
 
 
 
@@ -78,17 +86,23 @@
 - axios 공식 문서(?) :  https://github.com/axios/axios
 - axios 활용 : https://react.vlpt.us/integrate-api/01-basic.html
 - axios 러닝 가이드 : https://xn--xy1bk56a.run/axios/guide/#%EA%B8%B0%EB%8A%A5
-
-
-
-# 빌드 도구
-
-
-
+- axios 정리 : https://velog.io/@zofqofhtltm8015/Axios-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%84%9C%EB%B2%84-%ED%86%B5%EC%8B%A0-%ED%95%B4%EB%B3%B4%EA%B8%B0
 # 프레임워크
----
+<details>
+  <summary>(React공부하려면 이정돈 알아야함)</summary>
+  <div markdown="1">
+  ✨다음 질문들을 *구글링 하지 않으시고!* 대답할 수 있을 정도에 실력이 된다면 React Or Vue를 공부하시는 것을 ✅ 추천드립니다! 
+    
+  - 자바스크립트의 Class를  사용해서 객체를 만들 수 있나요? 
+      - JS클래스 => https://infoscis.github.io/2018/02/13/ecmascript-6-introducing-javascript-classes
+  - 
+</div>
+</details>
 
 # React
+- Js
+  - https://github.com/reactkr/learn-react-in-korean
+- https://github.com/enshahar/learning-react-kor
 # Next
 Next정리
 - https://github.com/zofqofhtltm8015/FrontEnd/tree/master/next/nextjs-blog
@@ -134,3 +148,10 @@ https://github.com/zofqofhtltm8015/FrontEnd/tree/master/vue
 
 # 최종근의 포트폴리오
 - 사이드 프로젝트
+
+|  <center>Header1</center> |  <center>Header2</center> |  <center>Header3</center> |
+|:--------|:--------:|--------:|
+|**cell 1x1** | <center>cell 1x2 </center> |*cell 1x3* |
+|**cell 2x1** | <center>cell 2x2 </center> |*cell 2x3* |
+|**cell 3x1** | <center>cell 3x2 </center> |*cell 3x3* |
+
