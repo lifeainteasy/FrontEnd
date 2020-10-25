@@ -97,10 +97,9 @@
 # 프레임워크
 <details>
   <summary>(React공부하려면 이정돈 알아야함)</summary>
-  - React를 배우기 전에 알아야 할 자바스크립트 기초
-    - https://medium.com/@violetboralee/react%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84%EC%97%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-javascript%EA%B8%B0%EC%B4%88-e0665f8cbee0             
-  - 리액트로 웹 만들기전에 알아야할   5가지
-    - https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS5903450353
+  1. [React를 배우기 전에 알아야 할 자바스크립트 기초](https://medium.com/@violetboralee/react%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84%EC%97%90-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-javascript%EA%B8%B0%EC%B4%88-e0665f8cbee0 ) <br>
+                
+  2. [리액트로 웹 만들기전에 알아야할   5가지](https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS5903450353)
  
 </details>
 
@@ -154,7 +153,7 @@ https://github.com/zofqofhtltm8015/FrontEnd/tree/master/vue
 # 최종근의 포트폴리오
 - 사이드 프로젝트
 
-|  <center>Header1</center> |  <center>Header2</center> |  <center>Header3</center> |
+|  <center>이름</center> |  <center>내용</center> |  <center>역할</center> |
 |:--------|:--------:|--------:|
 |**cell 1x1** | <center>cell 1x2 </center> |*cell 1x3* |
 |**cell 2x1** | <center>cell 2x2 </center> |*cell 2x3* |
