@@ -109,11 +109,11 @@ https://github.com/zofqofhtltm8015/FrontEnd/tree/master/vue
 
 # 최종근의 포트폴리오
 - 사이드 프로젝트
-
-
 |  <center>이름</center> |  <center>내용</center> |  <center>역할</center> |
 |:--------|:--------:|--------:|
 |**Frame** | <center> 짧은 글귀, 시 공유 플랫폼</center> |*Front-end(Vue)* |
 |**학교에 날씨를 더하다** | <center>대전시 날씨 공유 사이트</center> |*Front-end(퍼블리싱)* |
 |Don't Trash | <center>DSM 동아리 프로젝트 관리 사이트 </center> |*Front-end(Vue), Backend(Firebase)* |
 
+- 포트폴리오
+  - https://zofqofhtltm2.wixsite.com/portfolio
